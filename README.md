@@ -18,3 +18,12 @@ The repository contains a `.vscode` folder with a recommendation to enable the [
 
 > [!WARNING]
 > Please, use **always** SVG file format while working with new figures. Name the files as `*.drawio.svg` for the plugin to automatically detect the Draw.io files in VSCode.
+
+
+## Acknowledgements
+
+The development of this was supported by funding to the Blue Brain Project, a research center of the École polytechnique fédérale de Lausanne (EPFL), from the Swiss government’s ETH Board of the Swiss Federal Institutes of Technology.
+
+For license see LICENSE.txt.
+
+Copyright (c) 2023-2024 Blue Brain Project/EPFL
