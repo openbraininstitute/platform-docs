@@ -1,0 +1,42 @@
+name: ci 
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+jobs:
+  build:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: false
+      - name: Build static files
+        id: build
+        run: |
+          uv tool run \
+            --with mkdocs-material \
+            --with mkdocs-github-admonitions-plugin \
+            --with pymdown-extensions \
+            mkdocs build --strict
+      - name: Upload static files as artifact
+        id: deployment
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: build/
+  deploy:
+    runs-on: ubuntu-24.04
+    if: github.ref == 'refs/heads/main'
+    needs: build
+    permissions:
+      pages: write  # to deploy to Pages
+      id-token: write  # to verify the deployment originates from an appropriate source
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

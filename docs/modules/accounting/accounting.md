@@ -1,27 +1,6 @@
 
 # Accounting service draft
 
-* [Requirements](#requirements)
-  * [Functional requirements](#functional-requirements)
-  * [Non-functional requirements](#non-functional-requirements)
-* [High level architecture / data flow](#high-level-architecture--data-flow)
-* [General idea](#general-idea)
-* [Compute services](#compute-services)
-* [Storage report service](#storage-report-service)
-* [Accounting service](#accounting-service)
-  * [Ledger Accessor](#ledger-accessor)
-  * [Event processor](#event-processor)
-  * [Job charger](#job-charger)
-  * [Cost component](#cost-component)
-  * [AWS cost tracker](#aws-cost-tracker)
-  * [Watchdog](#watchdog)
-* [Business logic](#business-logic)
-  * [Longrun jobs](#longrun-jobs)
-  * [Oneshot jobs](#oneshot-jobs)
-  * [Storage](#storage)
-* [SQS event format](#sqs-event-format)
-* [DB schemas](#db-schemas)
-
 ## Requirements
 
 ### Functional requirements
@@ -129,16 +108,19 @@ graph
 ## General idea
 
 The accounting service is meant to collect usage statistics from compute/storage services and to translate it into the user cost, which means:
+
 * Updating virtual-lab/project budgets.
 * Providing the user with detailed information about the usage and the cost of the resources spent.
 
 ## Compute services
 
 Will handle two types of jobs by their billing model:
+
 * `longrun`, which are billed by running time and used resources (e.g. underlying EC2 instance type, number of nodes). Examples: model building, simulations, analysis.
 * `oneshot`, which are billed per execution with a fixed cost. Example: ML API calls.
 
 These services will be responsible for:
+
 * Executing pre-run checks to estimate the cost and reserve user funds for each execution.
 * Providing usage statistics in a form of events which mark the start and the end of usage sessions as well as hearbeat signals.
 * Listening for job termination requests from the accounting service (longrun jobs only).
@@ -154,11 +136,12 @@ Is responsible to periodically collect the usage statistics for shared S3 bucket
 It is one of the core components of the accounting service, it's role is to track, manage and report funds across various system and user (v-lab/project) accounts. Uses [double entry accounting](https://en.wikipedia.org/wiki/Double-entry_bookkeeping) model.
 
 The minimum list of accounts that are required for the service:
-  * User related accounts:
+
+* User related accounts:
     * Main account per each virtual lab. This is a target for top-ups.
     * Main account per each project.
     * Reservation account per each project.
-  * System accounts:
+* System accounts:
     * Main platform account
 
 Later on more accounts can be added, for example to track real AWS costs or other expenses.
@@ -168,9 +151,10 @@ SQL transactions **must** be used where applicable for concurrency control as we
 ### Event processor
 
 It's responsible to collect from the AWS Simple Queue Service (SQS) and initiate processing for:
+
 * Usage events from:
-  * The compute service.
-  * The storage report service.
+    * The compute service.
+    * The storage report service.
 * Top-up events from the payment provider.
 
 ### Job charger
@@ -768,4 +752,4 @@ erDiagram
   PRICE ||--|{ JOURNAL : "Is used by"
   ACCOUNT ||--|{ PRICE : "Is charged with"
   ACCOUNT ||--|{ JOB : "Started"
-  ```
+```

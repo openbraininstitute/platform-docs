@@ -1,6 +1,6 @@
 # ParallelCluster Knowledge Transfer
 > [!WARNING]
-> The documentation on this page is exclusively meant to assist during the development of the [ParallelCluster Provisioner](../provisioner/) in the future.
+> The documentation on this page is exclusively meant to assist during the development of the [ParallelCluster Provisioner](../provisioner/README.md) in the future.
 
 AWS ParallelCluster is an open-source cluster management tool that allows any organization to deploy High Performance Computing (HPC) clusters on AWS. The tool provides a high-level abstraction / representation for provisioning resources via CloudFormation in an automated and secure manner. It also supports multiple instance types from AWS EC2 and job schedulers such as SLURM.
 
