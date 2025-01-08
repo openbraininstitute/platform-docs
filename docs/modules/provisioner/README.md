@@ -4,7 +4,7 @@
 
 With the purpose of running large-scale simulations in the Blue Brain Open Platform, the **ParallelCluster Provisioner** is a service that provides the capability for deploying ParalellCluster instances on-demand for a given Project inside a Virtual Lab.
 
-When a new simulation is created, the [Workflow Service](../Workflow/) communicates via REST API with the Provisioner to request the creation of a ParallelCluster that will accommodate the workload from the simulation scheduled in the platform. If required, the Provisioner will then deploy a private HPC cluster that is tailor-made to the necessities of the campaign. Hence, allowing the Workflow Service to manage the different tasks required for the job to succeed.
+When a new simulation is created, the [Workflow Service](../workflow/README.md) communicates via REST API with the Provisioner to request the creation of a ParallelCluster that will accommodate the workload from the simulation scheduled in the platform. If required, the Provisioner will then deploy a private HPC cluster that is tailor-made to the necessities of the campaign. Hence, allowing the Workflow Service to manage the different tasks required for the job to succeed.
 
 ![ParallelCluster Provisioner - Main Architecture](resources/1_main.drawio.svg)
 
@@ -50,7 +50,7 @@ Scientific data is retrieved through the '`project`' directory in Lustre FSx, wh
 - A '`public`' directory containing all of the public assets of Blue Brain Open Platform stored in a shared S3 bucket. These assets are visible among all of the Virtual Labs.
 - A '`private`' directory that contains the assets stored by a particular Project in a Virtual Lab. The assets are implicitly not visible among Projects nor Virtual Labs.
 
-In certain use-cases (e.g., eModel Fitting), Lustre FSx is omitted to optimize the overall operational costs. The simulations rely on EFS instead. The data stored on S3 is still accessible through S3-FUSE, and the data synchronizations are handled through a conventional data upload on the [Metadata and Data Service](../Nexus/).
+In certain use-cases (e.g., eModel Fitting), Lustre FSx is omitted to optimize the overall operational costs. The simulations rely on EFS instead. The data stored on S3 is still accessible through S3-FUSE, and the data synchronizations are handled through a conventional data upload on the [Metadata and Data Service](../knowledgegraph/README.md).
 
 Note that the data management and knowledge graph data registration is still handled via Nexus, but orchestrated in this case from the Workflow Service.
 

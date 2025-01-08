@@ -6,7 +6,7 @@ Future work: deploy multiple copies of this for HA.
 ![Accounting Service - Main Architecture](resources/1_main.drawio.svg)
 
 > **TODO**
-> Add proper overview of the service, provide technical details, consolidate Draw.io figures, ..., etc. [See example template for further information](../template/).
+> Add proper overview of the service, provide technical details, consolidate Draw.io figures, ..., etc. [See example template for further information](../template/README.md).
 
 ## Content below copied from GitLab
 ![Swagger API](https://openbluebrain.com/api/accounting/docs)
