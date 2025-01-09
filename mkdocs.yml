@@ -1,65 +1,51 @@
 site_name: OBP - Architecture Documentation
 site_url: https://gianlucaficarelli.github.io/platform-docs/
 repo_url: https://github.com/GianlucaFicarelli/platform-docs
-copyright: Copyright &copy; 2025 Open Brain Institute
+copyright: '&copy; 2024 Blue Brain Project/EPFL, 2025 Open Brain Institute'
 extra:
-  generator: true
+  generator: false
 nav:
   - Home: README.md
   - Overview: overview/README.md
   - Modules:
     - Accounting Service:
       - modules/accounting/README.md
-      - Draft: modules/accounting/accounting.md
-    - Authentication and Authorization: modules/authnz/README.md
-    - Interactive Application Service: modules/interactive/README.md
+      - modules/accounting/accounting.md
+    - modules/authnz/README.md
+    - modules/interactive/README.md
     - Machine Learning Services:
-      - modules/machinelearning/README.md
-      - Agent Service: modules/machinelearning/agent/README.md
-      - Inference Service: modules/machinelearning/inference/README.md
-      - Literature Service: modules/machinelearning/literature/README.md
-    - Mesh Generation Service: modules/meshgeneration/README.md
-    - Metadata and Data Service: modules/knowledgegraph/README.md
-    - Model Data Service: modules/pointcloud/README.md
+      - modules/machinelearning/agent/README.md
+      - modules/machinelearning/inference/README.md
+      - modules/machinelearning/literature/README.md
+    - modules/meshgeneration/README.md
+    - modules/knowledgegraph/README.md
+    - modules/pointcloud/README.md
     - ParallelCluster Provisioner:
       - modules/provisioner/README.md
-      - Knowledge Transfer: modules/provisioner/ParallelCluster_PoC.md
-    - Thumbnail Service: modules/thumbnail/README.md
-    - Virtual Lab Service: modules/vlab/README.md
-    - Visualization Service: modules/visualization/README.md
-    - Workflow Service: modules/workflow/README.md
+      - modules/provisioner/ParallelCluster_PoC.md
+    - modules/thumbnail/README.md
+    - modules/vlab/README.md
+    - modules/visualization/README.md
+    - modules/workflow/README.md
     - Template: modules/template/README.md
   - Useful Links: modules/useful-links.md
+validation:
+  omitted_files: warn
+  absolute_links: warn
+  unrecognized_links: warn
+  anchors: warn
 theme:
   name: material
   features:
     - navigation.instant
-    #- navigation.tracking
-    #- navigation.tabs
-    #- navigation.tabs.sticky
-    #- navigation.expand
+    - navigation.tracking
     - navigation.top
-    - navigation.indexes
     - content.code.copy
     - content.action.edit
     - toc.integrate
     - toc.follow
     - search.suggest
-    # - search.highlight
-    # - search.share
-  palette:
-    # Palette toggle for light mode
-    - media: "(prefers-color-scheme: light)"
-      scheme: default
-      toggle:
-        icon: material/brightness-5
-        name: Switch to dark mode
-    # Palette toggle for dark mode
-    - media: "(prefers-color-scheme: dark)"
-      scheme: slate
-      toggle:
-        icon: material/brightness-3
-        name: Switch to light mode
+    - search.highlight
 plugins:
   - search
   - gh-admonitions
@@ -70,6 +56,7 @@ markdown_extensions:
   - toc:
       permalink: "#"
       toc_depth: 3
+  - pymdownx.details
   - pymdownx.superfences:
       custom_fences:
         - name: mermaid
