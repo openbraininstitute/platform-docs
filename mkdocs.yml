@@ -36,6 +36,8 @@ validation:
   anchors: warn
 theme:
   name: material
+  icon:
+    logo: fontawesome/solid/brain
   features:
     - navigation.instant
     - navigation.tracking
@@ -51,12 +53,16 @@ plugins:
   - gh-admonitions
 markdown_extensions:
   - admonition
+  - attr_list
   - footnotes
   - sane_lists
   - toc:
       permalink: "#"
       toc_depth: 3
   - pymdownx.details
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - pymdownx.superfences:
       custom_fences:
         - name: mermaid
