@@ -18,7 +18,7 @@ jobs:
         run: |
           uv tool run \
             --with mkdocs-material \
-            --with mkdocs-github-admonitions-plugin \
+            --with mkdocs-callouts \
             --with pymdown-extensions \
             mkdocs build --strict
       - name: Upload static files as artifact
