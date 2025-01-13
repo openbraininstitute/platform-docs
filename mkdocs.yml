@@ -7,13 +7,16 @@ extra:
 nav:
   - Home: README.md
   - Overview: overview/README.md
-  - Modules:
+  - Services:
+    - modules/README.md
     - Accounting Service:
       - modules/accounting/README.md
       - modules/accounting/accounting.md
     - modules/authnz/README.md
+    - modules/corewebapp/README.md
     - modules/interactive/README.md
     - Machine Learning Services:
+      - modules/machinelearning/README.md
       - modules/machinelearning/agent/README.md
       - modules/machinelearning/inference/README.md
       - modules/machinelearning/literature/README.md
@@ -28,7 +31,6 @@ nav:
     - modules/visualization/README.md
     - modules/workflow/README.md
     - Template: modules/template/README.md
-  - Useful Links: modules/useful-links.md
 validation:
   omitted_files: warn
   absolute_links: warn
@@ -42,19 +44,24 @@ theme:
     - navigation.instant
     - navigation.tracking
     - navigation.top
+    - navigation.indexes
+    - navigation.expand
     - content.code.copy
     - content.action.edit
     - toc.integrate
     - toc.follow
     - search.suggest
     - search.highlight
+extra_css:
+  - assets/stylesheets/extra.css
 plugins:
   - search
-  - gh-admonitions
+  - callouts
 markdown_extensions:
   - admonition
   - attr_list
   - footnotes
+  - nl2br # for mkdocs-callouts
   - sane_lists
   - toc:
       permalink: "#"

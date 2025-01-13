@@ -1,6 +1,13 @@
 # ParallelCluster Provisioner
-> [!NOTE]
-> **Also known as:** HPC Resource Provisioner
+
+- **Description:** Provides the capability for deploying ParalellCluster instances on-demand for a given Project inside a Virtual Lab
+- **Also known as:** HPC Resource Provisioner
+- **Source:** <https://github.com/openbraininstitute/hpc-resource-provisioner>
+- **API:** <>
+- **AWS Dashboard:** <https://us-east-1.console.aws.amazon.com/cloudwatch/home?region=us-east-1#dashboards/dashboard/HPC-Resource-Provisioner>
+- **Maintainer(s):**
+
+## Overview
 
 With the purpose of running large-scale simulations in the Blue Brain Open Platform, the **ParallelCluster Provisioner** is a service that provides the capability for deploying ParalellCluster instances on-demand for a given Project inside a Virtual Lab.
 

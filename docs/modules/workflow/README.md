@@ -1,17 +1,27 @@
 # Workflow Service
-> [!NOTE]
-> **Also known as:** `bbp-workflow`
+
+- **Description:** Orchestrates large-scale simulations
+- **Also known as:** bbp-workflow
+- **Sources:**
+    - <https://github.com/openbraininstitute/bbp-workflow>
+    - Launcher: <https://github.com/openbraininstitute/bbp-workflow-svc>
+- **API:** <>
+- **AWS Dashboard:** <https://us-east-1.console.aws.amazon.com/cloudwatch/home?region=us-east-1#dashboards/dashboard/bbp-workflow>
+- **AWS Cluster:** <https://us-east-1.console.aws.amazon.com/ecs/v2/clusters/bbp_workflow_svc/services?region=us-east-1>
+- **Maintainer(s):**
+
+## Overview
 
 One of the future use-cases expected in the Blue Brain Open Platform, would be to run large-scale simulations that may require dozens or even hundreds of computational resources and high-performance storage infrastructure (e.g., Lustre FSx). The orchestration for such simulations is mostly led by the **Workflow Service**, whose purpose is to spawn tailor-made resources through the [ParallelCluster Provisioner](../provisioner/README.md) and to control / monitor the execution of the different tasks associated with the workloads, among others.
 
-When a new simulation is requested from the interface of the platform, a request is made to the REST API of the Workflow Service to authorize the request and also to orchestrate the deployment of [`bbp-workflow`](https://github.com/BlueBrain/bbp-workflow) inside an ECS Container Instance. The Provisioner is in charge of deploying the necessary infrastructure (if required) and provides the Workflow Service with the necessary information to locate and authenticate on the cluster. After this, the service will schedule and monitor the execution of the different tasks running in the cluster, as well as coordinate the data registration in the knowledge graph via the [Metadata and Data Service](../knowledgegraph/README.md).
+When a new simulation is requested from the interface of the platform, a request is made to the REST API of the Workflow Service to authorize the request and also to orchestrate the deployment of [`bbp-workflow`](https://github.com/openbraininstitute/bbp-workflow) inside an ECS Container Instance. The Provisioner is in charge of deploying the necessary infrastructure (if required) and provides the Workflow Service with the necessary information to locate and authenticate on the cluster. After this, the service will schedule and monitor the execution of the different tasks running in the cluster, as well as coordinate the data registration in the knowledge graph via the [Metadata and Data Service](../knowledgegraph/README.md).
 
 ![Workflow Service - Main Architecture](resources/1_main.drawio.svg)
 
 Here are some of the key technologies utilized for the infrastructure:
 
 - The Workflow Service mainly runs on an **ECS Container Instance** orchestrated via an **ECS Cluster**, with one instance launched per Virtual Lab Project[^Deployment].
-  - The service is based on the use of a container image from  [`bbp-workflow`](https://github.com/BlueBrain/bbp-workflow).
+  - The service is based on the use of a container image from  [`bbp-workflow`](https://github.com/openbraininstitute/bbp-workflow).
   - The source code of bbp-workflow is written in Python 3 and relies on the use of [Luigi Framework](https://github.com/spotify/luigi) to build the job pipelines and monitor the execution.
 - All the communication with the Workflow Service is handled exclusively via a REST API provided by **AWS API Gateway**.
   - Only the authorized users are allowed to interact with the service.
