@@ -15,12 +15,7 @@ jobs:
           enable-cache: false
       - name: Build static files
         id: build
-        run: |
-          uv tool run \
-            --with mkdocs-material \
-            --with mkdocs-callouts \
-            --with pymdown-extensions \
-            mkdocs build --strict
+        run: make build
       - name: Upload static files as artifact
         id: upload
         uses: actions/upload-pages-artifact@v3
