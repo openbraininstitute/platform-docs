@@ -8,6 +8,7 @@
 - **API:** <>
 - **AWS Dashboard:** <https://us-east-1.console.aws.amazon.com/cloudwatch/home?region=us-east-1#dashboards/dashboard/bbp-workflow>
 - **AWS Cluster:** <https://us-east-1.console.aws.amazon.com/ecs/v2/clusters/bbp_workflow_svc/services?region=us-east-1>
+- **AWS Lambdas:** <https://us-east-1.console.aws.amazon.com/lambda/home?region=us-east-1#/functions?fo=and&o0=%3A&sb=FunctionName&so=ascending&v0=bbp_workflow>
 - **Maintainer(s):**
 
 ## Overview

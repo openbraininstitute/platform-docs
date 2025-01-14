@@ -20,6 +20,7 @@ nav:
       - modules/machinelearning/agent/README.md
       - modules/machinelearning/inference/README.md
       - modules/machinelearning/literature/README.md
+    - modules/memodelanalysis/README.md
     - modules/meshgeneration/README.md
     - modules/knowledgegraph/README.md
     - modules/pointcloud/README.md
