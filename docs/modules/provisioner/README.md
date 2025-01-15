@@ -5,6 +5,7 @@
 - **Source:** <https://github.com/openbraininstitute/hpc-resource-provisioner>
 - **API:** <>
 - **AWS Dashboard:** <https://us-east-1.console.aws.amazon.com/cloudwatch/home?region=us-east-1#dashboards/dashboard/HPC-Resource-Provisioner>
+- **AWS Lambdas:** <https://us-east-1.console.aws.amazon.com/lambda/home?region=us-east-1#/functions?fo=and&o0=%3A&sb=FunctionName&so=ascending&v0=hpc-resource-provisioner>
 - **Maintainer(s):**
 
 ## Overview

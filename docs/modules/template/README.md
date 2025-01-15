@@ -7,6 +7,7 @@
 - **AWS Dashboard:** <>
 - **AWS Cluster:** <>
 - **AWS Service:** <>
+- **AWS Lambdas:**: <>
 - **Maintainer(s):**
 
 ## Overview
