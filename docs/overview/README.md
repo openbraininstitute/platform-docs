@@ -7,7 +7,7 @@ Brief introduction with an overview of the platform. Lorem ipsum dolor sit amet,
 > **TODO**
 > Add proper introduction and Draw.io diagram below, instead of PNG
 
-![Blue Brain Open Platform - Main Architecture](resources/1_main.drawio.svg)
+![Open Brain Platform - Main Architecture](resources/1_main.drawio.svg)
 
 ## Infrastructure Overview
 
@@ -16,7 +16,7 @@ Brief introduction with an overview of the infrastructure, such as load balancer
 > **TODO**
 > Add proper details and Draw.io diagram below, instead of PNG
 
-![Blue Brain Open Platform - Main Architecture](resources/2_infrastructure.drawio.svg)
+![Open Brain Platform - Main Architecture](resources/2_infrastructure.drawio.svg)
 
 ## Virtual Labs and Projects
 
@@ -33,7 +33,7 @@ Team members must be granted access to `Projects`, and they are the only ones wi
 It is possible to be part of a `Virtual Lab`, but not part of a `project`.
 
 ## Configuration and Deployment
-The AWS infrastructure required for the Blue Brain Open Platform is exclusively managed through infrastructure-as-code. We use Terraform to configure and deploy the different components of the platform, including setting up IAM policies, security groups, or tagging.
+The AWS infrastructure required for the Open Brain Platform is exclusively managed through infrastructure-as-code. We use Terraform to configure and deploy the different components of the platform, including setting up IAM policies, security groups, or tagging.
 
 Each service is defined on its own Terraform module and operates independently from the rest of the services.
 
@@ -43,7 +43,7 @@ Each service is defined on its own Terraform module and operates independently f
 ## Cost Monitoring Support
 Our infrastructure relies heavily on the use of **AWS Tags** in order to understand the overall operational costs for each of the services running in the platform. Our goal is to ensure that we can not only provide realistic costs estimates, but also identify the specific resources that each Virtual Lab and Project utilizes.
 
-![Blue Brain Open Platform - Main Architecture](resources/3_costmonitoring_tags.drawio.svg)
+![Open Brain Platform - Main Architecture](resources/3_costmonitoring_tags.drawio.svg)
 
 Further, we have introduced mechanisms for monitoring the tags of each resource after Terraform runs and deploys the infrastructure changes. In particular, a dedicated CI job runs and utilizes **AWS Resource Explorer** to query for untagged resources. We then utilize different information from the resource to determine the component, and in certain cases the resource is tagged automatically (e.g., Terraform does not tag private ENIs).
 

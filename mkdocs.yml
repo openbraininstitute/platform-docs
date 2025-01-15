@@ -1,6 +1,6 @@
-site_name: OBP - Architecture Documentation
-site_url: https://gianlucaficarelli.github.io/platform-docs/
-repo_url: https://github.com/GianlucaFicarelli/platform-docs
+site_name: OBP Architecture Documentation
+site_url: https://openbraininstitute.github.io/platform-docs/
+repo_url: https://github.com/openbraininstitute/platform-docs
 copyright: '&copy; 2024 Blue Brain Project/EPFL, 2025 Open Brain Institute'
 extra:
   generator: false
