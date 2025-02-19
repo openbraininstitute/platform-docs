@@ -1,6 +1,6 @@
 # Overview
 
-## Architecture Overview 
+## Architecture Overview
 
 Brief introduction with an overview of the platform. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...
 
@@ -32,13 +32,28 @@ These resources are accounted for and billed in a per `Project` fashion.
 Team members must be granted access to `Projects`, and they are the only ones with access to the Nexus project.
 It is possible to be part of a `Virtual Lab`, but not part of a `project`.
 
+When communicating with other services, the UUID of the virtual lab, and the UUID of the project should always be used.
+They are the stable ID, other properties may change.
+
+When using web API's, the header should be used to transmit the `virtual-lab-id` and `project-id`:
+```
+    GET /[....]/ HTTP/1.1
+    Accept: */*
+    Accept-Encoding: gzip, deflate
+    Authorization: Bearer [....]
+    Connection: keep-alive
+    Host: ...
+    project-id: 42424242-bc92-4e30-aa32-63be8eb9ca49
+    virtual-lab-id: 42424242-a19e-4b3d-b737-5286a5fbea2d
+```
+
 ## Configuration and Deployment
 The AWS infrastructure required for the Open Brain Platform is exclusively managed through infrastructure-as-code. We use Terraform to configure and deploy the different components of the platform, including setting up IAM policies, security groups, or tagging.
 
 Each service is defined on its own Terraform module and operates independently from the rest of the services.
 
 > **TODO**
-> Elaborate some of the deployment details and general information. 
+> Elaborate some of the deployment details and general information.
 
 ## Cost Monitoring Support
 Our infrastructure relies heavily on the use of **AWS Tags** in order to understand the overall operational costs for each of the services running in the platform. Our goal is to ensure that we can not only provide realistic costs estimates, but also identify the specific resources that each Virtual Lab and Project utilizes.
