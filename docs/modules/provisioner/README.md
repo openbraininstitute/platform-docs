@@ -58,7 +58,7 @@ Scientific data is retrieved through the '`project`' directory in Lustre FSx, wh
 - A '`public`' directory containing all the public assets of Open Brain Platform stored in a shared S3 bucket. These assets are visible among all of the Virtual Labs.
 - A '`private`' directory that contains the assets stored by a particular Project in a Virtual Lab. The assets are implicitly not visible among Projects nor Virtual Labs.
 
-In certain use-cases (e.g., eModel Fitting), Lustre FSx is omitted to optimize the overall operational costs. The simulations rely on EFS instead. The data stored on S3 is still accessible through S3-FUSE, and the data synchronizations are handled through a conventional data upload on the [Metadata and Data Service](../knowledgegraph/README.md).
+In certain use-cases (e.g., eModel Fitting), Lustre FSx is omitted to optimize the overall operational costs. The simulations rely on EFS instead. The data stored on S3 is still accessible through S3-FUSE, and the data synchronizations are handled through a conventional data upload on the Metadata and Data Service.
 
 Note that the data management and knowledge graph data registration is still handled via Nexus, but orchestrated in this case from the Workflow Service.
 

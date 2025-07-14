@@ -13,7 +13,7 @@
 Tracks costs for services; when a service is launched it either sends a message via SQS saying it’s starting, and then when it ends or it uses an API call to do the same.
 Future work: deploy multiple copies of this for HA.
 
-![Accounting Service - Main Architecture](resources/1_main.drawio.svg)
+![Accounting Service - Main Architecture](resources/2_azure.drawio.svg)
 
 
 ## Goals

@@ -10,4 +10,4 @@
 
 ## Overview
 
-![Thumbnail Service - Main Architecture](resources/1_main.drawio.svg)
+![Thumbnail Service - Main Architecture](resources/2_azure.drawio.svg)

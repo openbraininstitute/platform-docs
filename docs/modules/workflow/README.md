@@ -15,7 +15,7 @@
 
 One of the future use-cases expected in the Open Brain Platform, would be to run large-scale simulations that may require dozens or even hundreds of computational resources and high-performance storage infrastructure (e.g., Lustre FSx). The orchestration for such simulations is mostly led by the **Workflow Service**, whose purpose is to spawn tailor-made resources through the [ParallelCluster Provisioner](../provisioner/README.md) and to control / monitor the execution of the different tasks associated with the workloads, among others.
 
-When a new simulation is requested from the interface of the platform, a request is made to the REST API of the Workflow Service to authorize the request and also to orchestrate the deployment of [`bbp-workflow`](https://github.com/openbraininstitute/bbp-workflow) inside an ECS Container Instance. The Provisioner is in charge of deploying the necessary infrastructure (if required) and provides the Workflow Service with the necessary information to locate and authenticate on the cluster. After this, the service will schedule and monitor the execution of the different tasks running in the cluster, as well as coordinate the data registration in the knowledge graph via the [Metadata and Data Service](../knowledgegraph/README.md).
+When a new simulation is requested from the interface of the platform, a request is made to the REST API of the Workflow Service to authorize the request and also to orchestrate the deployment of [`bbp-workflow`](https://github.com/openbraininstitute/bbp-workflow) inside an ECS Container Instance. The Provisioner is in charge of deploying the necessary infrastructure (if required) and provides the Workflow Service with the necessary information to locate and authenticate on the cluster. After this, the service will schedule and monitor the execution of the different tasks running in the cluster, as well as coordinate the data registration in the knowledge graph via the Metadata and Data Service.
 
 ![Workflow Service - Main Architecture](resources/1_main.drawio.svg)
 
@@ -30,8 +30,8 @@ Here are some of the key technologies utilized for the infrastructure:
   - An authorization token is provided for the Container Instances Handler.
 - The Container Instances Handler is another **AWS Lambda** that validates the authorization token and provides support in the orchestration of the Workflow instances.
 - The [ParallelCluster Provisioner](../provisioner/README.md) provides the necessary details to request the SSH private key to the **AWS Secrets Manager**, as well as to locate the ParallelCluster deployed for the specific Virtual Lab Project.
-- Interactions with the [Metadata and Data Service](../knowledgegraph/README.md) are required to register new data into the knowledge graph.
+- Interactions with the Metadata and Data Service are required to register new data into the knowledge graph.
   - In the case of large-scale simulations with Lustre FSx, the synchronization of the data is managed by a dedicated job with elevated permissions that relies on the existing S3-DRA setup. The Workflow service handles the request to store the data, monitor the job that is communicating with the Lustre HSM Service, and finally handles the confirmation of the synchronization.
-  - In the case of large-scale simulations without Lustre FSx (e.g., eModel Fitting), the synchronization of the data is managed via direct upload to the knowledge graph using the support provided by Nexus. 
+  - In the case of large-scale simulations without Lustre FSx (e.g., eModel Fitting), the synchronization of the data is managed via direct upload to the knowledge graph using the support provided by Nexus.
 
 [^Deployment]: Each ParallelCluster deployment is constrained to a Project inside a Virtual Lab. Thus, the approach is to deploy a container instance per Project. We might limit the number of instances in the future.

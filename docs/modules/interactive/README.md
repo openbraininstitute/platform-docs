@@ -10,4 +10,4 @@
 
 ## Overview
 
-![Interactive Application Service - Main Architecture](resources/1_main.drawio.svg)
+![Interactive Application Service - Main Architecture](resources/2_azure.drawio.svg)

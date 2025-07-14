@@ -10,4 +10,4 @@
 
 ## Overview
 
-![Model Data Service - Main Architecture](resources/1_main.drawio.svg)
+![Model Data Service - Main Architecture](resources/2_azure.drawio.svg)
