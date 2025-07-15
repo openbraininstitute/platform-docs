@@ -14,22 +14,18 @@ nav:
       - modules/accounting/accounting.md
     - modules/authnz/README.md
     - modules/corewebapp/README.md
+    - modules/entitycore/README.md
     - modules/interactive/README.md
     - Machine Learning Services:
       - modules/machinelearning/README.md
       - modules/machinelearning/agent/README.md
-      - modules/machinelearning/inference/README.md
       - modules/machinelearning/literature/README.md
-    - modules/memodelanalysis/README.md
-    - modules/meshgeneration/README.md
-    - modules/knowledgegraph/README.md
     - modules/pointcloud/README.md
     - ParallelCluster Provisioner:
       - modules/provisioner/README.md
       - modules/provisioner/ParallelCluster_PoC.md
     - modules/thumbnail/README.md
     - modules/vlab/README.md
-    - modules/visualization/README.md
     - modules/workflow/README.md
     - Template: modules/template/README.md
 validation:

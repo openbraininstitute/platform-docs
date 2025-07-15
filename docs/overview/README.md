@@ -2,21 +2,24 @@
 
 ## Architecture Overview
 
-Brief introduction with an overview of the platform. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...
-
-> **TODO**
-> Add proper introduction and Draw.io diagram below, instead of PNG
+Overview of the platform.
 
 ![Open Brain Platform - Main Architecture](resources/1_main.drawio.svg)
 
+## Services overview
+
+![Open Brain Platform - Services](resources/4_services.drawio.svg)
+
+
 ## Infrastructure Overview
 
-Brief introduction with an overview of the infrastructure, such as load balancer, NAT, DNS, etc. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam...
+Overview of the infrastructure, such as load balancer, NAT, DNS, etc.
 
 > **TODO**
 > Add proper details and Draw.io diagram below, instead of PNG
 
-![Open Brain Platform - Main Architecture](resources/2_infrastructure.drawio.svg)
+![Open Brain Platform - Infrastructure](resources/2_infrastructure.drawio.svg)
+
 
 ## Virtual Labs and Projects
 
