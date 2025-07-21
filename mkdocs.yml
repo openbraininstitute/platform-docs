@@ -21,12 +21,8 @@ nav:
       - modules/machinelearning/agent/README.md
       - modules/machinelearning/literature/README.md
     - modules/pointcloud/README.md
-    - ParallelCluster Provisioner:
-      - modules/provisioner/README.md
-      - modules/provisioner/ParallelCluster_PoC.md
     - modules/thumbnail/README.md
     - modules/vlab/README.md
-    - modules/workflow/README.md
     - Template: modules/template/README.md
 validation:
   omitted_files: warn
