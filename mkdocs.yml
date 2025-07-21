@@ -20,6 +20,8 @@ nav:
       - modules/machinelearning/README.md
       - modules/machinelearning/agent/README.md
       - modules/machinelearning/literature/README.md
+    - modules/notebooks/README.md
+    - modules/obione/README.md
     - modules/pointcloud/README.md
     - modules/thumbnail/README.md
     - modules/vlab/README.md
