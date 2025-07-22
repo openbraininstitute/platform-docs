@@ -12,13 +12,11 @@ nav:
     - Accounting Service:
       - modules/accounting/README.md
       - modules/accounting/accounting.md
+    - modules/agent/README.md
     - modules/authnz/README.md
     - modules/corewebapp/README.md
     - modules/entitycore/README.md
     - modules/interactive/README.md
-    - Machine Learning Services:
-      - modules/machinelearning/README.md
-      - modules/machinelearning/agent/README.md
     - modules/notebooks/README.md
     - modules/obione/README.md
     - modules/pointcloud/README.md
