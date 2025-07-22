@@ -19,7 +19,6 @@ nav:
     - Machine Learning Services:
       - modules/machinelearning/README.md
       - modules/machinelearning/agent/README.md
-      - modules/machinelearning/literature/README.md
     - modules/notebooks/README.md
     - modules/obione/README.md
     - modules/pointcloud/README.md
