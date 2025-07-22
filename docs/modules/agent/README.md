@@ -10,4 +10,4 @@
 
 ## Overview
 
-![Agent Service - Main Architecture](resources/1_main.drawio.svg)
+![Agent Service - Main Architecture](resources/2_azure.drawio.svg)
