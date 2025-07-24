@@ -16,7 +16,6 @@ nav:
       - modules/authnz/README.md
       - modules/corewebapp/README.md
       - modules/entitycore/README.md
-      - modules/interactive/README.md
       - modules/notebooks/README.md
       - modules/obione/README.md
       - modules/pointcloud/README.md
