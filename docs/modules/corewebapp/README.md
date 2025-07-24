@@ -141,3 +141,7 @@ flowchart LR
     class Accounting grayed;
     classDef grayed fill:#e0e0e0,stroke:#888,color:#222,stroke-width:2px;
 ```
+
+
+## Cloud Architecture
+![CoreWebApp - Cloud Architecture](resources/2_azure.drawio.svg)
