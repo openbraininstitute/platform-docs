@@ -1,28 +1,28 @@
 site_name: OBP Architecture Documentation
 site_url: https://openbraininstitute.github.io/platform-docs/
 repo_url: https://github.com/openbraininstitute/platform-docs
-copyright: '&copy; 2024 Blue Brain Project/EPFL, 2025 Open Brain Institute'
+copyright: "&copy; 2024 Blue Brain Project/EPFL, 2025 Open Brain Institute"
 extra:
   generator: false
 nav:
   - Home: README.md
   - Overview: overview/README.md
   - Services:
-    - modules/README.md
-    - Accounting Service:
-      - modules/accounting/README.md
-      - modules/accounting/accounting.md
-    - modules/agent/README.md
-    - modules/authnz/README.md
-    - modules/corewebapp/README.md
-    - modules/entitycore/README.md
-    - modules/interactive/README.md
-    - modules/notebooks/README.md
-    - modules/obione/README.md
-    - modules/pointcloud/README.md
-    - modules/thumbnail/README.md
-    - modules/vlab/README.md
-    - Template: modules/template/README.md
+      - modules/README.md
+      - Accounting Service:
+          - modules/accounting/README.md
+          - modules/accounting/accounting.md
+      - modules/agent/README.md
+      - modules/authnz/README.md
+      - modules/corewebapp/README.md
+      - modules/entitycore/README.md
+      - modules/notebooks/README.md
+      - modules/obione/README.md
+      - modules/pointcloud/README.md
+      - modules/small-scale-simulator/README.md
+      - modules/thumbnail/README.md
+      - modules/vlab/README.md
+      - Template: modules/template/README.md
 validation:
   omitted_files: warn
   absolute_links: warn
