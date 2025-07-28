@@ -7,7 +7,7 @@
 - **AWS Dashboard:** <https://us-east-1.console.aws.amazon.com/cloudwatch/home?region=us-east-1#dashboards/dashboard/obi-one>
 - **AWS Cluster:** <https://us-east-1.console.aws.amazon.com/ecs/v2/clusters/obi_one_ecs_cluster/services?region=us-east-1>
 - **AWS Service:** <https://us-east-1.console.aws.amazon.com/ecs/v2/clusters/obi_one_ecs_cluster/services/obi_one_ecs_service/health?region=us-east-1>
-- **Maintainer(s): James B Isbister, Christoph Pokorny, Gianluca Firacelli**
+- **Maintainer(s): James B Isbister, Christoph Pokorny, Gianluca Ficarelli**
 
 ## Overview
 
