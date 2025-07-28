@@ -13,7 +13,7 @@
 
 <!-- Brief introduction with an overview of the module. -->
 
-The service exposes functionalies of the obi-one package <https://github.com/openbraininstitute/obi-one> (a standardized library of functions + workflows for biophysically-detailed brain modeling written in Python) through two types of endpoint: 
+The service exposes functionalities of the obi-one package <https://github.com/openbraininstitute/obi-one> (a standardized library of functions + workflows for biophysically-detailed brain modeling written in Python) through two types of endpoint: 
 1. Generated endpoints. These endpoints are generated dynamically for a specified list of configuration schemas defined in the obi-one package. Calling these endpoints executes the scientific code associated with the configuration schema.
 2. Declared endpoints. These are explicitly defined endpoints, also exposing scientific functionalities of the package.
 
