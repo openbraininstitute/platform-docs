@@ -8,4 +8,4 @@
 
 ## Storage
 
-* S3 bucket cell_svc_perf_bucket_name R/O mounted on /sbo/data/project
+* S3 bucket "sbo-cell-svc-perf-test" R/O mounted on /sbo/data/project
