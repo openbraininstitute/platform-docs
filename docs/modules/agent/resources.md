@@ -5,8 +5,8 @@
 * Launch Type: AWS Fargate
 * CPU: 1024 CPU units (1 vCPU)
 * Memory: 2048 MB (2 GB)
-* Minimum Capacityg: 1 instance
-* Maximum Capacityg: 5 instances
+* Minimum Capacity: 1 instance
+* Maximum Capacity: 5 instances
 
 
 ## RDS PostgreSQL Database
