@@ -12,16 +12,35 @@ nav:
       - Accounting Service:
           - modules/accounting/README.md
           - modules/accounting/accounting.md
-      - modules/agent/README.md
-      - modules/authnz/README.md
-      - modules/corewebapp/README.md
-      - modules/entitycore/README.md
-      - modules/notebooks/README.md
-      - modules/obione/README.md
-      - modules/pointcloud/README.md
-      - modules/small-scale-simulator/README.md
-      - modules/thumbnail/README.md
-      - modules/vlab/README.md
+          - Resources: modules/accounting/resources.md
+      - Agent:
+          - Overview: modules/agent/README.md
+          - Resources: modules/agent/resources.md
+      - Auth-Manager:
+          - Resources: modules/auth-manager/resources.md
+      - Authnz:
+          - Overview: modules/authnz/README.md
+          - Resources: modules/authnz/resources.md
+      - Core-Web-App: modules/corewebapp/README.md
+      - EntityCore:
+          - Overview: modules/entitycore/README.md
+          - Resources: modules/entitycore/resources.md
+      - Launch System:
+          - Resources: modules/launch-system/resources.md
+      - Notebooks: modules/notebooks/README.md
+      - obi-one:
+          - Overview: modules/obione/README.md
+          - Resources: modules/obione/resources.md
+      - Point Cloud:
+          - Overview: modules/pointcloud/README.md
+          - Resources: modules/pointcloud/resources.md
+      - Small Scale Simulator: modules/small-scale-simulator/README.md
+      - Thumbnail:
+          - Overview: modules/thumbnail/README.md
+          - Resources: modules/thumbnail/resources.md
+      - VLab:
+          - Overview: modules/vlab/README.md
+          - Resources: modules/vlab/resources.md
       - Template: modules/template/README.md
 validation:
   omitted_files: warn
