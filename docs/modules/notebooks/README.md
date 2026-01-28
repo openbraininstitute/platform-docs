@@ -3,7 +3,7 @@
 - **Description:** Runs Jupyter notebooks interactively
 - **Also known as:** Jupyterhub Service on Kubernetes
 - **Source:** https://z2jh.jupyter.org/en/stable/index.html
-- **AWS EKS Cluster:** 
+- **AWS EKS Cluster:**
 - **AWS Service:** <>
 - **Maintainer(s):**
 
@@ -15,7 +15,7 @@ This JupyterHub service is based on the **Zero to JupyterHub with Kubernetes** d
 
 *   **Orchestration:** AWS Elastic Kubernetes Service (EKS).
 *   **Authentication:** Keycloak configured as the OIDC provider.
-*   **DNS:** Managed via AWS Route53. 
+*   **DNS:** Managed via AWS Route53.
 *   **User Persistence:** Each user is allocated a 10 GB EBS-backed PersistentVolumeClaim (PVC) which is mounted as their `/home` directory. This ensures state persistence across sessions.
 *   **Shared Data:** A central S3 bucket can be mounted as a read-only volume into each user pod to provide access to shared scientific data.
 
@@ -33,4 +33,10 @@ The infrastructure and service are deployed using the following tools:
 
 ### Architecture
 
-![Notebooks Service - Main Architecture](resources/1_main.drawio.svg)
+#### AWS
+
+![Notebooks Service - AWS Architecture](resources/1_aws.drawio.svg)
+
+#### Azure
+
+![Notebooks Service - Azure Architecture](resources/2_azure.drawio.svg)
